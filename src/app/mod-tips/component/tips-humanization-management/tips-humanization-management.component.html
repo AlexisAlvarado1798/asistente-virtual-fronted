@@ -1,0 +1,61 @@
+<div class="card-container">
+  <mat-card>
+    <mat-card-header>
+      <div>
+        <mat-card-title>Crear Tip</mat-card-title>
+      </div>
+    </mat-card-header>
+    <div class="from-contanier">
+      <mat-card-content>
+        <div style="display: flex">
+          <div *ngIf="!submitted" class="container-input">
+            <label for="code">Codigo:</label>
+            <input id="code" type="text" pInputText [(ngModel)]="tips.code"/>
+            <label for="description">Descripcion:</label>
+            <textarea id="description" pInputTextarea [autoResize]="true"
+                      [(ngModel)]="tips.description"></textarea>
+            <label for="date">Fecha</label>
+            <input id="date" type="text" pInputText [(ngModel)]="tips.conExpressionDate"/>
+          </div>
+          <div class="container-cron" style="flex: 1">
+            <p-fieldset legend="Cronograma">
+              <div class="p-field-checkbox-dropdown">
+                <p-checkbox name="group1" value="New York" id="monday"></p-checkbox>
+                <label for="monday">Lunes</label>
+                <p-checkbox name="group1" value="New York" id="tuesday"></p-checkbox>
+                <label for="tuesday">Martes</label>
+                <p-checkbox name="group1" value="New York" id="wednesday"></p-checkbox>
+                <label for="wednesday">Miercoles</label>
+                <p-checkbox name="group1" value="New York" id="thursday"></p-checkbox>
+                <label for="thursday">Jueves</label>
+                <p-checkbox name="group1" value="New York" id="friday"></p-checkbox>
+                <label for="friday">Viernes</label>
+              </div>
+              <div class="p-field-checkbox-dropdown" style="flex: 1">
+                <div>
+                  <label for="cron-date-time">Hora</label>
+                  <p-dropdown [options]="time" id="cron-date-time" optionLabel="name" optionValue="code"></p-dropdown>
+                </div>
+                <div>
+                  <label for="cron-date-minute">:</label>
+                  <p-dropdown [options]="minute" id="cron-date-minute" optionLabel="name" optionValue="code"></p-dropdown>
+                </div>
+                <div>
+                  <label for="cron-date">:</label>
+                  <p-dropdown [options]="ampm" id="cron-date" optionLabel="name" optionValue="code"></p-dropdown>
+                </div>
+              </div>
+            </p-fieldset>
+          </div>
+        </div>
+        <p-button label="Guardar" type="submit" (click)="onClickSave()"></p-button>
+      </mat-card-content>
+    </div>
+  </mat-card>
+</div>
+
+
+
+
+
+

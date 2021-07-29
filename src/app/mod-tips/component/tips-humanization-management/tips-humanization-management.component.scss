@@ -1,0 +1,30 @@
+.card-container {
+  margin: 5%;
+  width: 65%;
+}
+
+from-contanier {
+  column-count: 2;
+}
+
+.container-input {
+  display: flex;
+  flex: 0.3;
+  flex-direction: column;
+  width: 300px;
+}
+
+.container-cron {
+  display: flex;
+  margin-left: 20%;
+}
+
+.p-field-checkbox-dropdown {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  padding: 3px;
+}
+
+
